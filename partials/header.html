@@ -1,0 +1,126 @@
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky" ng-controller="HeaderController">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav ">
+          <!-- ***** Logo Start ***** -->
+          <a href="#" class="logo">
+            <img src="../assets/images/xicon.png" alt="Galaxy mobile shopee"/>
+          </a>
+          <div class="loc-call-icons">
+            <a class="location-icon" href="https://maps.app.goo.gl/4cm8yhucR5MXRYSUA"><i class="fa-solid fa-location-dot"></i></a>
+            <a class="nav-call-icon" href="tel:+91 98508 02830"><i class="fa-solid fa-phone"></i></a>
+          </div>
+          <!-- ***** Logo End ***** -->
+
+          <!-- ***** Menu Start ***** -->
+          <ul class="nav">
+            <li><a href="#welcome" class="active">Home</a></li>
+            <li><a href="#features">About</a></li>
+
+            <!-- Dropdown Menu Start -->
+            <li class="dropdown" ng-class="{ 'open': isDropdownOpen }">
+              <a href="" ng-click="toggleDropdown()">
+                Services <i class="fa-solid fa-chevron-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#!/Service1" ng-click="closeDropdown()">iPhone Repair</a></li>
+                <li><a href="#!/Service2" ng-click="closeDropdown()">iPad Repair</a></li>
+                <li><a href="#!/Service3" ng-click="closeDropdown()">Macbook Repair</a></li>
+                <li><a href="#!/Service4" ng-click="closeDropdown()">iMac Repair</a></li>
+                <li><a href="#!/Service4" ng-click="closeDropdown()">iWatch Repair</a></li>
+                <li><a href="#!/Service4" ng-click="closeDropdown()">AirPods Repair</a></li>
+            </ul>
+            </li>
+            <!-- Dropdown Menu End -->
+
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <a class='menu-trigger' ng-click="toggleMobileMenu()">
+            <span>Menu</span>
+          </a>
+          <!-- ***** Menu End ***** -->
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ***** Header Area End ***** -->
+
+<style>
+/* Default desktop styles - hover dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  text-align: center;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Mobile styles - clickable dropdown */
+@media (max-width: 991px) {
+  .dropdown:hover .dropdown-menu {
+    display: none; /* Disable hover on mobile */
+  }
+  
+  .dropdown.open .dropdown-menu {
+    display: block;
+    position: static;
+    float: none; 
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+  
+  .menu-trigger.active + .nav {
+    display: block;
+  }
+
+  .dropdown-menu {
+    text-align: center; /* Align text to the left on mobile */
+  }
+}
+
+
+.dropdown-menu > li > a {
+  /* 4. Ensure the links inside the list items span the full width of the menu */
+  display: block; 
+  /* 5. Set text alignment for the links themselves */
+  text-align: left; 
+  /* 6. Add some horizontal padding for visual spacing, if needed */
+  padding: 3px 20px; 
+}
+
+@media (max-width: 991px) {
+  .dropdown-menu > li > a {
+    text-align: center; /* Align text to the left on mobile */
+    padding: 10px 15px; /* Adjust padding for better touch targets */
+  }
+}
+
+</style>
