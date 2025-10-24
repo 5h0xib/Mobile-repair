@@ -1,8 +1,8 @@
 
 :root {
   /* 1. Primary Colors (Based on #C53E3E) */
-  --color-logo: #ff5656;             /* Your Logo Color */
-  --color-primary: #C53E3E;          /* Your Main Deep Red */
+  --color-logo: #ff5656;             /* Logo Color */
+  --color-primary: #C53E3E;          /* Main Deep Red */
   --color-primary-dark: #8C1E1E;     /* Darker Shade for Depth/Shadows */
 }
 
@@ -568,7 +568,7 @@ header
   -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
   -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
   transform: translateY(6px) translateX(1px) rotate(45deg);
-  background-color: #d8d8d8;
+  background-color: var(--color-logo);
 }
 
 .header-area .main-nav .menu-trigger.active span:after {

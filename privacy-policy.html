@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - iphonic services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        ::selection {
+          background: #C53E3E;
+          color: #fff;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .logo-div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .logo-div img {
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-div img:hover {
+            transform: scale(1.05);
+        }
+        
+        .privacy-policy {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #000000;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 15px;
+            background: linear-gradient(135deg, #571212, #ff0000);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px rgba(227, 119, 119, 0.7));
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #db3434, #000000);
+            border-radius: 2px;
+        }
+        
+        .last-updated {
+            text-align: right;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            padding: 10px 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        
+        h3 {
+            color: #502c2c;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f1ecec;
+            position: relative;
+        }
+        
+        h3::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #db3434;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        a {
+            color: #ad0000;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        a:hover {
+            color: #b92929;
+            text-decoration: underline;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-left: 4px solid #db3434;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: transform 0.2s ease;
+        }
+        
+        .contact-info:hover {
+            transform: translateX(5px);
+        }
+        
+        .contact-info i {
+            color: #db3434;
+            font-size: 1.2rem;
+        }
+        
+        .footer-note {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        /* New Contact Section Styles */
+        .contact-section {
+            margin: 25px 0;
+        }
+        
+        .contact-category {
+            margin-bottom: 25px;
+        }
+        
+        .contact-category h4 {
+            color: #502c2c;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 3px solid #db3434;
+        }
+        
+        .contact-person {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .contact-person:hover {
+            border-left: 3px solid #db3434;
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-person h5 {
+            color: #502c2c;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .contact-person h5 i {
+            color: #db3434;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 8px 0;
+            padding: 8px 0;
+        }
+        
+        .contact-detail i {
+            color: #db3434;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            background: #fff;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+        
+        .social-link:hover {
+            background: #f1f3f4;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-link i {
+            color: #db3434;
+        }
+        
+        .branches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .privacy-policy {
+                padding: 25px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .last-updated {
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+            
+            .branches-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animation for page load */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .privacy-policy {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-div">
+        <a href="index.html">
+            <img height="110" src="./assets/images/newLogo.png" alt="iPhonic Services Logo" draggable="false">
+        </a>
+    </div>
+    
+    <div class="privacy-policy">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: 24 October 2025</p>
+        
+        <div class="highlight-box">
+            <p>This Privacy Policy describes how iphonic services ("we," "our," or "us") collects, uses, and protects your personal information when you use our repair services for iPhone, iPad, Macbook, iMac, iWatch, and AirPods at <a href="http://iphonicservices.com">iphonicservices.com</a>.</p>
+        </div>
+
+        <h3><i class="fas fa-info-circle"></i> Information We Collect</h3>
+        <p>We collect information you provide directly, including your name, contact details, and device information. During repair, we may temporarily access device data necessary for diagnostics, but we do not copy, store, or distribute your personal files, photos, or passwords[citation:1].</p>
+
+        <h3><i class="fas fa-cogs"></i> How We Use Your Information</h3>
+        <p>We use your information solely to perform repairs, provide service updates, and process transactions. We do not sell or rent your personal data to third parties.</p>
+
+        <h3><i class="fas fa-shield-alt"></i> Data Security</h3>
+        <p>We implement reasonable security measures to protect your information against unauthorized access. Your device's data is handled with confidentiality, and our technicians are prohibited from accessing personal content unless essential for repair[citation:1].</p>
+
+        <h3><i class="fas fa-users"></i> Third-Party Sharing</h3>
+        <p>We do not share your personal information with third parties except as necessary to complete your repair (e.g., ordering parts) or if required by law.</p>
+
+        <h3><i class="fas fa-user-check"></i> Your Rights</h3>
+        <p>You have the right to access, correct, or delete your personal information. Contact us to exercise these rights.</p>
+
+        <h3><i class="fas fa-envelope"></i> Contact Us</h3>
+        <p>For questions about this Privacy Policy or your data, contact us at:</p>
+        
+        <!-- Contact Information Section -->
+        <div class="contact-section">
+            <div class="contact-category">
+                <h4>Founder</h4>
+                <div class="contact-person">
+                    <h5><i class="fas fa-user"></i> Ashok Purushottam Machcha</h5>
+                    <div class="contact-detail">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Role: Founder</span>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <span>Phone: <a href="tel:9545541541">9545541541</a></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-category">
+                <h4>Proprietor</h4>
+                <div class="contact-person">
+                    <h5><i class="fas fa-user"></i> Dhanashri Ashok Machcha</h5>
+                    <div class="contact-detail">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Role: Proprietor</span>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <span>Phone: <a href="tel:9225541541">9225541541</a></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-category">
+                <h4>Contact Channels</h4>
+                <div class="contact-person">
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email: <a href="mailto:iphonicservices@gmail.com">iphonicservices@gmail.com</a></span>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://wa.me/9545541541" class="social-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="https://www.instagram.com/iphonic_services" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://www.facebook.com/ashokamobiles" class="social-link" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-category">
+                <h4>Branches</h4>
+                <div class="branches-grid">
+                    <div class="contact-person">
+                        <h5><i class="fas fa-map-marker-alt"></i> Ahilyanagar</h5>
+                        <div class="contact-detail">
+                            <i class="fas fa-user"></i>
+                            <span>Contact Person: Nilesh Sonagra</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <span>Phone: <a href="tel:9823758888">9823758888</a></span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-person">
+                        <h5><i class="fas fa-map-marker-alt"></i> Sangli</h5>
+                        <div class="contact-detail">
+                            <i class="fas fa-user"></i>
+                            <span>Contact Person: Abid Tamboli</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <span>Phone: <a href="tel:8600600582">8600600582</a></span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-person">
+                        <h5><i class="fas fa-map-marker-alt"></i> Dhanori (Pune)</h5>
+                        <div class="contact-detail">
+                            <i class="fas fa-user"></i>
+                            <span>Contact Person: Sameer Shaikh</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <span>Phone: <a href="tel:9075574432">9075574432</a></span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-person">
+                        <h5><i class="fas fa-map-marker-alt"></i> JM Road (Pune)</h5>
+                        <div class="contact-detail">
+                            <i class="fas fa-user"></i>
+                            <span>Contact Person: Ashok Machcha</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <span>Phone: <a href="tel:9545541541">9545541541</a></span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-person">
+                        <h5><i class="fas fa-map-marker-alt"></i> Kharadi (Pune)</h5>
+                        <div class="contact-detail">
+                            <i class="fas fa-user"></i>
+                            <span>Contact Person: Dhanashri Machcha</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <span>Phone: <a href="tel:9225541541">9225541541</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <p class="footer-note">We may update this policy periodically. Any changes will be posted on this page with an updated revision date.</p>
+    </div>
+</body>
+</html>

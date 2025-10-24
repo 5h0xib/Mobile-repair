@@ -14,10 +14,8 @@ app.config(function($routeProvider) {
       templateUrl: "views/home.html",
       controller: "HomeCtrl"
     })
-    .when("/Services", {
-      templateUrl: "views/services.html",
-      controller: "ServicesCtrl"
-    })
+
+    // individual services
     .when("/iphone-repair", {
       templateUrl: "views/iphone-repair.html",
       controller: "ServicesCtrl"
@@ -34,13 +32,16 @@ app.config(function($routeProvider) {
       templateUrl: "views/imac-repair.html",
       controller: "ServicesCtrl"
     })
+    .when("/iwatch-repair", {
+      templateUrl: "views/iwatch-repair.html",
+      controller: "ServicesCtrl"
+    })
     .when("/airpods-repair", {
       templateUrl: "views/airpods-repair.html",
       controller: "ServicesCtrl"
     })
-    .when("/contact", {
-      templateUrl: "views/contact.html",
-    })
+
+
     .otherwise({
       redirectTo: "/"
     });
@@ -124,9 +125,70 @@ app.config(function($routeProvider) {
             };
         }]);
 
-app.controller("ServicesCtrl", function($scope) {
-  $scope.title = "Services";
-  $scope.message = "This is the service page content.";
+app.controller('ServicesCtrl', function($scope) {
+
+  // Web3Forms access key
+  $scope.web3formsAccessKey = '66b058d6-2a27-41db-bd33-c2e12aee64dc';
+  
+  // Initialize the selected repair option
+  $scope.selectedRepairOption = 'Screen / Display Replacement';
+  $scope.formSubmitted = false;
+  
+  // Available iPhone models
+  $scope.modelOptions = [
+      'iPhone 8', 'iPhone 8 Plus', 'iPhone X', 'iPhone XR', 'iPhone XS', 'iPhone XS Max',
+      'iPhone 11', 'iPhone 11 Pro', 'iPhone 11 Pro Max', 'iPhone SE (2nd generation)',
+      'iPhone 12', 'iPhone 12 mini', 'iPhone 12 Pro', 'iPhone 12 Pro Max',
+      'iPhone 13', 'iPhone 13 mini', 'iPhone 13 Pro', 'iPhone 13 Pro Max', 'iPhone SE (3rd generation)',
+      'iPhone 14', 'iPhone 14 Plus', 'iPhone 14 Pro', 'iPhone 14 Pro Max',
+      'iPhone 15', 'iPhone 15 Plus', 'iPhone 15 Pro', 'iPhone 15 Pro Max',
+      'iPhone 16', 'iPhone 16 Plus', 'iPhone 16 Pro', 'iPhone 16 Pro Max',
+      'iPhone 17', 'iPhone 17 air', 'iPhone 17 Pro', 'iPhone 17 Pro Max'
+  ];
+  
+  // Function to handle repair option selection
+  $scope.selectRepairOption = function(repairOption) {
+      $scope.selectedRepairOption = repairOption;
+      $scope.formData.repairOption = repairOption;
+  };
+  
+  // Function to check if a repair option is selected
+  $scope.isSelected = function(repairOption) {
+      return $scope.selectedRepairOption === repairOption;
+  };
+  
+  // Initialize form data
+  $scope.formData = {
+      Name: '',
+      Number: '',
+      Model: '',
+      repairOption: 'Screen / Display Replacement'
+  };
+  
+  // Submit function
+  $scope.submitForm = function() {
+      // You can add form validation here
+      if ($scope.formData.Name && $scope.formData.Number && $scope.formData.Model) {
+          console.log('Form submitted:', $scope.formData);
+          $scope.formSubmitted = true;
+          
+          // Reset form after 5 seconds
+          setTimeout(function() {
+              $scope.$apply(function() {
+                  $scope.formSubmitted = false;
+                  $scope.formData = {
+                      Name: '',
+                      Number: '',
+                      Model: '',
+                      repairOption: 'Screen / Display Replacement'
+                  };
+                  $scope.selectedRepairOption = 'Screen / Display Replacement';
+              });
+          }, 5000);
+      } else {
+          alert('Please fill all required fields');
+      }
+  };
 });
 
 // --- To access current path in ng-class ---
@@ -149,26 +211,28 @@ app.controller('HeaderController', function($scope) {
     $scope.isDropdownOpen = !$scope.isDropdownOpen;
   };
   
-  $scope.closeDropdown = function() {
-    $scope.isDropdownOpen = false;
-  };
-  
   $scope.toggleMobileMenu = function() {
     $scope.isMobileMenuOpen = !$scope.isMobileMenuOpen;
-    // Close dropdown when mobile menu closes
-    if (!$scope.isMobileMenuOpen) {
-      $scope.isDropdownOpen = false;
+    // Also trigger jQuery menu toggle
+    if (window.jQuery && $('.menu-trigger').length) {
+      if (!$scope.isMobileMenuOpen) {
+        $('.menu-trigger').removeClass('active');
+        $('.header-area .nav').slideUp(200);
+      }
     }
   };
   
-  // Close dropdown when clicking outside (optional enhancement)
-  angular.element(document).on('click', function(event) {
-    if (!event.target.closest('.dropdown')) {
-      $scope.$apply(function() {
-        $scope.isDropdownOpen = false;
-      });
+  // Simple function to close everything
+  $scope.closeAll = function() {
+    $scope.isDropdownOpen = false;
+    $scope.isMobileMenuOpen = false;
+    
+    // Also close jQuery mobile menu
+    if (window.jQuery && $('.menu-trigger').length) {
+      $('.menu-trigger').removeClass('active');
+      $('.header-area .nav').slideUp(200);
     }
-  });
+  };
 });
 
 // --- jQuery-based UI logic wrapped inside a function ---

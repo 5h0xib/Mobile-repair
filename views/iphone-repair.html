@@ -1,0 +1,413 @@
+<!-- IPHONE REPAIR -->
+
+<!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h1><z>iPhone</z><br><strong>REPAIRING</strong></h1>
+                        <p><strong style="color: #ffffff;">Get your device repaired from professionals</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+
+    <section class="iphone-repair-form">
+        <div class="repair-container">
+            <div class="image-section">
+                <img src="../assets/images/iphone14probroken.png" alt="Broken iPhone">
+            </div>
+            <div class="text-section">
+                <h2>Get your iPhone <br>Repaired Now</h2>
+                <a href="tel:+919850802830" class="main-button-slider"><i class="fa-solid fa-phone"></i> Call Now</a>
+                <p>OR QUICKLY ANSWER A FEW QUESTIONS BELOW</p>
+            </div>
+        </div>
+
+        <form class="contact" action="https://api.web3forms.com/submit" method="post" ng-submit="submitForm()">
+            <input type="hidden" name="access_key" value="{{web3formsAccessKey}}">
+            <input type="hidden" name="redirect" value="https://iphonicservices.com/success.html">
+            <input type="hidden" name="subject" value="iPhone Repair Request">
+            <input type="hidden" name="repair-option" ng-value="selectedRepairOption">
+            
+            <div class="repair-form-container">
+                <div class="grid-section">
+                    <div class="grid-item" ng-class="{'selected': isSelected('Screen / Display Replacement')}" 
+                         ng-click="selectRepairOption('Screen / Display Replacement')">
+                        <input type="radio" id="screen-replacement" name="repair-option" value="Screen / Display Replacement" 
+                               ng-checked="isSelected('Screen / Display Replacement')">
+                        <label for="screen-replacement">
+                            <img class="brokenscreen" src="../assets/images/brokenscreen.png" alt="Screen / Display Replacement">
+                            <p>Screen / Display Replacement</p>
+                        </label>
+                    </div>
+                    <div class="grid-item" ng-class="{'selected': isSelected('Battery Replacement')}" 
+                         ng-click="selectRepairOption('Battery Replacement')">
+                        <input type="radio" id="battery-replacement" name="repair-option" value="Battery Replacement"
+                               ng-checked="isSelected('Battery Replacement')">
+                        <label for="battery-replacement">
+                            <img class="battery" src="../assets/images/iphonebattery.png" alt="Battery Replacement">
+                            <p>Battery Replacement</p>
+                        </label>
+                    </div>
+                    <div class="grid-item" ng-class="{'selected': isSelected('Charging Flex / Strip Replacement')}" 
+                         ng-click="selectRepairOption('Charging Flex / Strip Replacement')">
+                        <input type="radio" id="charging-flex-replacement" name="repair-option" value="Charging Flex / Strip Replacement"
+                               ng-checked="isSelected('Charging Flex / Strip Replacement')">
+                        <label for="charging-flex-replacement">
+                            <img class="charging-flex" src="../assets/images/chargingflex.png" alt="Charging Flex / Strip Replacement">
+                            <p>Charging Flex / Strip Replacement</p>
+                        </label>
+                    </div>
+                    <div class="grid-item" ng-class="{'selected': isSelected('Speaker/Ringer Replacement')}" 
+                         ng-click="selectRepairOption('Speaker/Ringer Replacement')">
+                        <input type="radio" id="speaker-replacement" name="repair-option" value="Speaker/Ringer Replacement"
+                               ng-checked="isSelected('Speaker/Ringer Replacement')">
+                        <label for="speaker-replacement">
+                            <img class="speaker-replacement" src="../assets/images/speakerreplace.png" alt="Speaker/Ringer Replacement">
+                            <p>Speaker/Ringer Replacement</p>
+                        </label>
+                    </div>
+                    <div class="grid-item" ng-class="{'selected': isSelected('Mic / Ear Speaker Replacement')}" 
+                         ng-click="selectRepairOption('Mic / Ear Speaker Replacement')">
+                        <input type="radio" id="mic-ear-speaker-replacement" name="repair-option" value="Mic / Ear Speaker Replacement"
+                               ng-checked="isSelected('Mic / Ear Speaker Replacement')">
+                        <label for="mic-ear-speaker-replacement">
+                            <img class="mic-ear-speaker-replacement" src="../assets/images/earspeaker.png" alt="Mic / Ear Speaker Replacement">
+                            <p>Mic / Ear Speaker Replacement</p>
+                        </label>
+                    </div>
+                    <div class="grid-item" ng-class="{'selected': isSelected('Front Camera Repair/Replacement')}" 
+                         ng-click="selectRepairOption('Front Camera Repair/Replacement')">
+                        <input type="radio" id="front-camera-replacement" name="repair-option" value="Front Camera Repair/Replacement"
+                               ng-checked="isSelected('Front Camera Repair/Replacement')">
+                        <label for="front-camera-replacement">
+                            <img class="front-camera-replacement" src="../assets/images/frontcamara.png" alt="Front Camera Replacement">
+                            <p>Front Camera Replacement</p>
+                        </label>
+                    </div>
+                    <div class="grid-item" ng-class="{'selected': isSelected('Rear Camera Repair/Replacement')}" 
+                         ng-click="selectRepairOption('Rear Camera Repair/Replacement')">
+                        <input type="radio" id="Rare-camera-replacement" name="repair-option" value="Rear Camera Repair/Replacement"
+                               ng-checked="isSelected('Rear Camera Repair/Replacement')">
+                        <label for="Rare-camera-replacement">
+                            <img class="Rare-camera-replacement" src="../assets/images/camarareplace.png" alt="Rear Camera Replacement">
+                            <p>Rear Camera Replacement</p>
+                        </label>
+                    </div>
+                    <div class="grid-item" ng-class="{'selected': isSelected('Light & Motion Sensor Repair/Replacement')}" 
+                         ng-click="selectRepairOption('Light & Motion Sensor Repair/Replacement')">
+                        <input type="radio" id="Light-Motion-Sensor-replacement" name="repair-option" value="Light & Motion Sensor Repair/Replacement"
+                               ng-checked="isSelected('Light & Motion Sensor Repair/Replacement')">
+                        <label for="Light-Motion-Sensor-replacement">
+                            <img class="Light-Motion-Sensor-replacement" src="../assets/images/lmsensor.png" alt="Light-Motion-Sensor-replacement">
+                            <p>Light & Motion Sensor Repair/Replacement</p>
+                        </label>
+                    </div>
+                    <div class="grid-item" ng-class="{'selected': isSelected('Power/Volume Button Replacement')}" 
+                         ng-click="selectRepairOption('Power/Volume Button Replacement')">
+                        <input type="radio" id="power-button-replacement" name="repair-option" value="Power/Volume Button Replacement"
+                               ng-checked="isSelected('Power/Volume Button Replacement')">
+                        <label for="power-button-replacement">
+                            <img class="power-button-replacement" src="../assets/images/powerbuttonreplace.png" alt="Power Button Replacement">
+                            <p>Power/Volume Button Replacement</p>
+                        </label>
+                    </div>
+                    <div class="grid-item" ng-class="{'selected': isSelected('Body Housing Replacement')}" 
+                         ng-click="selectRepairOption('Body Housing Replacement')">
+                        <input type="radio" id="body-housing-replacement" name="repair-option" value="Body Housing Replacement"
+                               ng-checked="isSelected('Body Housing Replacement')">
+                        <label for="body-housing-replacement">
+                            <img class="body-housing-replacement" src="../assets/images/bodyreplace.png" alt="Body Housing Replacement">
+                            <p>Body Housing Replacement</p>
+                        </label>
+                    </div>
+                    <div class="grid-item" ng-class="{'selected': isSelected('Display & Broken Glass Repair')}" 
+                         ng-click="selectRepairOption('Display & Broken Glass Repair')">
+                        <input type="radio" id="display-glass-repair" name="repair-option" value="Display & Broken Glass Repair"
+                               ng-checked="isSelected('Display & Broken Glass Repair')">
+                        <label for="display-glass-repair">
+                            <img class="display-glass-repair" src="../assets/images/displaybrokenglassrepair.png" alt="Display & Broken Glass Repair">
+                            <p>Display & Broken Glass Repair</p>
+                        </label>
+                    </div>
+                    <div class="grid-item" ng-class="{'selected': isSelected('IC Repair/Replacement (All types)')}" 
+                         ng-click="selectRepairOption('IC Repair/Replacement (All types)')">
+                        <input type="radio" id="ic-repair-replacement" name="repair-option" value="IC Repair/Replacement (All types)"
+                               ng-checked="isSelected('IC Repair/Replacement (All types)')">
+                        <label for="ic-repair-replacement">
+                            <img class="ic-repair-replacement" src="../assets/images/icrepair.png" alt="IC Repair/Replacement (All types)">
+                            <p>IC Repair/Replacement</p>
+                        </label>
+                    </div>
+                    <div class="grid-item" ng-class="{'selected': isSelected('Face ID Repair/Replacement')}" 
+                         ng-click="selectRepairOption('Face ID Repair/Replacement')">
+                        <input type="radio" id="Faceid-Repair/Replacement" name="repair-option" value="Face ID Repair/Replacement"
+                               ng-checked="isSelected('Face ID Repair/Replacement')">
+                        <label for="Faceid-Repair/Replacement">
+                            <img class="Faceid-Repair/Replacement" src="../assets/images/faceidrepair.png" alt="Faceid-Repair/Replacemen">
+                            <p>Face ID Repair/Replacement </p>
+                        </label>
+                    </div>
+                    <div class="grid-item" ng-class="{'selected': isSelected('Water Damage Repair')}" 
+                         ng-click="selectRepairOption('Water Damage Repair')">
+                        <input type="radio" id="water-damage-Repair" name="repair-option" value="Water Damage Repair"
+                               ng-checked="isSelected('Water Damage Repair')">
+                        <label for="water-damage-Repair">
+                            <img class="water-damage-Repair" src="../assets/images/waterdamage.png" alt="Water Damage Repair">
+                            <p>Water Damage Repair</p>
+                        </label>
+                    </div>
+                    <div class="grid-item" ng-class="{'selected': isSelected('Other Issues')}" 
+                         ng-click="selectRepairOption('Other Issues')">
+                        <input type="radio" id="Others-issues" name="repair-option" value="Other Issues"
+                               ng-checked="isSelected('Other Issues')">
+                        <label for="Others-issues">
+                            <img class="Others-issues" src="../assets/images/otherissues.png" alt="Others-issues">
+                            <p>Other Issues</p>
+                        </label>
+                    </div>
+                </div>
+        
+                <div class="details-section">
+                    <h3>Model Name</h3>
+        
+                    <div class="form-box">
+                        <div class="details-box">
+                            <p>
+                                <input name="Name" type="text" ng-model="formData.Name" required placeholder="Enter Your Name">
+                            </p>
+                            <p>
+                                <input name="Number" type="tel" ng-model="formData.Number" required placeholder="Phone number">
+                            </p>
+                            <p>
+                                <select id="Model" name="Model" ng-model="formData.Model" required>
+                                    <option value="">Select your iPhone model</option>
+                                    <option ng-repeat="model in modelOptions" value="{{model}}">{{model}}</option>
+                                </select>
+                            </p>
+                            <!-- <p><strong>Selected Repair:</strong><br>
+                                <input type="text" ng-model="selectedRepairOption" readonly style="background-color: #f5f5f5;">
+                            </p> -->
+                        </div>
+                        <button type="submit" class="main-button-slider submit-btn">Submit Request</button>
+                    </div>
+                </div>
+            </div>
+        </form>     
+    </section>
+
+<style>
+
+
+.iphone-repair-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.repair-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    transform: translateY(-250px);
+    margin-bottom: -200px;
+    z-index: 10;
+}
+
+@media screen and (max-width: 768px) {
+    .repair-container{
+        flex-direction: column;
+    }
+}
+
+.image-section {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-section {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.text-section h2 {
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+
+.text-section p {
+    color: #555555;
+    margin-top: 20px;
+}
+
+/* repair form */
+
+.repair-form-container {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 1500px;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .repair-form-container{
+        flex-direction: column;
+    }
+}
+
+.grid-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    flex: 3;
+    transition: ease-in-out 0.3s;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    transition: ease-in-out 0.3s;
+}
+
+.grid-item label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-item input[type="radio"] {
+  display: none;
+  transition: ease-in-out 0.3s;
+}
+
+.grid-item input[type="radio"]:checked + label {
+  border-color: var(--color-primary);
+  background-color: #ffe7e7;
+  transition: ease-in-out 0.3s;
+}
+
+.grid-item img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+    transition: ease-in-out 0.3s;
+}
+
+.grid-item p {
+    color: #333;
+    text-align: center;
+    font-size: 14px;
+}
+
+.grid-item.selected {
+    border-color: var(--color-primary);
+    background-color: #ffe7e7;
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.329);
+    transition: ease-in-out 0.3s;
+}
+
+.details-section {
+    flex: 1;
+    padding: 30px;
+    background: linear-gradient(135deg, #ff00000c, #0000000c);
+    border: 1px solid #000000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-section h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.details-section .form-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.details-box input[type="text"],
+.details-box input[type="tel"],
+.details-box select {
+    width: 100%;
+    padding: 15px;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+
+.details-box p {
+    color: #555;
+    margin: 10px 0;
+}
+
+.details-box select{
+  width: 100%;
+  padding: 5px;
+}
+
+.battery{
+  height: 10px;
+}
+
+.welcome-area {
+  background: url('../assets/images/iphonerepairbg.png') center/cover no-repeat;
+}
+
+.submit-btn{
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+div h1 z {
+    color: #ffffff;
+    font-size: 42px;
+}
+
+</style>
