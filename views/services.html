@@ -1,2 +1,213 @@
-<h2>{{title}}</h2>
-<p>{{message}}</p>
+<div class="service-body-main">
+    <section class="repair-services-section" id="service">
+        <h1 class="services-title .ac-number">Apple Device Repair Services</h1>
+        <p class="services-subtitle">Expert repairs for all your Apple devices with fast service and premium parts</p>
+
+        <div class="services-grid-container">
+            <!-- iPhone Repair -->
+            <div class="service-card-iphone border-design-class">
+                <div class="glow-iphone"></div>
+                <i class="fas fa-mobile-alt icon-iphone"></i>
+                <h2 class="title-iphone">iPhone Repair</h2>
+                <p class="description-iphone">Fast and reliable iPhone repairs for all models. Screen replacements, battery
+                    issues, water damage, and more.</p>
+                <a href="#!/iphone-repair" class="main-button-slider">Book Repair</a>
+            </div>
+
+            <!-- iPad Repair -->
+            <div class="service-card-ipad border-design-class">
+                <div class="glow-ipad"></div>
+                <i class="fas fa-tablet-alt icon-ipad"></i>
+                <h2 class="title-ipad">iPad Repair</h2>
+                <p class="description-ipad">Expert iPad repairs including screen fixes, charging port issues, and
+                    performance optimization.</p>
+                <a href="#!/ipad-repair" class="main-button-slider">Book Repair</a>
+            </div>
+
+            <!-- MacBook Repair -->
+            <div class="service-card-macbook border-design-class">
+                <div class="glow-macbook"></div>
+                <i class="fas fa-laptop icon-macbook"></i>
+                <h2 class="title-macbook">MacBook Repair</h2>
+                <p class="description-macbook">Comprehensive MacBook repairs for all models. Screen, keyboard, battery, and
+                    logic board issues.</p>
+                <a href="#!/macbook-repair" class="main-button-slider">Book Repair</a>
+            </div>
+
+            <!-- iMac Repair -->
+            <div class="service-card-imac border-design-class">
+                <div class="glow-imac"></div>
+                <i class="fas fa-desktop icon-imac"></i>
+                <h2 class="title-imac">iMac Repair</h2>
+                <p class="description-imac">Professional iMac repairs including screen replacement, hardware upgrades, and
+                    performance issues.</p>
+                <a href="#!/imac-repair" class="main-button-slider">Book Repair</a>
+            </div>
+
+            <!-- Apple Watch Repair -->
+            <div class="service-card-iwatch border-design-class">
+                <div class="glow-iwatch"></div>
+                <i class="fas fa-clock icon-iwatch"></i>
+                <h2 class="title-iwatch">Apple Watch Repair</h2>
+                <p class="description-iwatch">Specialized Apple Watch repairs for screen, battery, and water damage issues
+                    on all models.</p>
+                <a href="#!/iwatch-repair" class="main-button-slider">Book Repair</a>
+            </div>
+
+            <!-- AirPods Repair -->
+            <div class="service-card-airpods border-design-class">
+                <div class="glow-airpods"></div>
+                <i class="fas fa-headphones icon-airpods"></i>
+                <h2 class="title-airpods">AirPods Repair</h2>
+                <p class="description-airpods">Fix for AirPods connectivity, battery, and audio issues. Case repairs and
+                    replacements available.</p>
+                <a href="#!/airpods-repair" class="main-button-slider">Book Repair</a>
+            </div>
+        </div>
+    </section>
+</div>
+<style>
+.service-body-main{
+    padding-top: 100px;
+    background: linear-gradient(135deg, #ffffffe0, #ffffffe0), url(../assets/images/servicebg.png);
+}
+
+.repair-services-section {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Title & Subtitle */
+.services-title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 34px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #964848, #ff0000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 10px rgba(227, 119, 119, 0.7));
+    transition: all 0.4s ease;
+}
+
+.services-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: rgba(36, 36, 36, 0.7);
+    margin-bottom: 50px;
+}
+
+/* Grid Layout */
+.services-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Service Cards */
+.service-card-iphone,
+.service-card-ipad,
+.service-card-macbook,
+.service-card-imac,
+.service-card-iwatch,
+.service-card-airpods {
+    background: rgba(255, 255, 255, 0.466);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 2px solid rgba(88, 88, 88, 0.2);
+    position: relative;
+    box-shadow: 0 0 15px rgba(150, 72, 72, 0.2);
+}
+
+.service-card-iphone:hover,
+.service-card-ipad:hover,
+.service-card-macbook:hover,
+.service-card-imac:hover,
+.service-card-iwatch:hover,
+.service-card-airpods:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.35),
+                0 0 40px rgba(150, 72, 72, 0.25);
+}
+
+/* Icons */
+.icon-iphone,
+.icon-ipad,
+.icon-macbook,
+.icon-imac,
+.icon-iwatch,
+.icon-airpods {
+    font-size: 50px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #964848, #ff0000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.icon-iphone:hover,
+.icon-ipad:hover,
+.icon-macbook:hover,
+.icon-imac:hover,
+.icon-iwatch:hover,
+.icon-airpods:hover {
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.6),
+                 0 0 25px rgba(150, 72, 72, 0.5);
+}
+
+/* Titles */
+.title-iphone,
+.title-ipad,
+.title-macbook,
+.title-imac,
+.title-iwatch,
+.title-airpods {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* Descriptions */
+.description-iphone,
+.description-ipad,
+.description-macbook,
+.description-imac,
+.description-iwatch,
+.description-airpods {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: rgba(36, 36, 36, 0.8);
+}
+
+/* Buttons */
+.main-button-slider {
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+.main-button-slider:hover {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .services-title {
+        font-size: 32px;
+    }
+}
+
+</style>

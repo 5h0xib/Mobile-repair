@@ -15,6 +15,11 @@ app.config(function($routeProvider) {
       controller: "HomeCtrl"
     })
 
+    .when("/services", {
+      templateUrl: "views/services.html",
+      controller: "ServicesCtrl"
+    })
+
     // individual services
     .when("/iphone-repair", {
       templateUrl: "views/iphone-repair.html",
