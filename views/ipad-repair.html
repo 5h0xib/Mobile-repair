@@ -33,9 +33,11 @@
           <h5>Fill out the form below and we will reach out shortly</h5>
           <form class="contact" action="https://api.web3forms.com/submit" method="post">
             <input type="hidden" name="access_key" value="{{web3formsAccessKey}}">
+            <input type="hidden" name="redirect" value="https://iphonicservices.com/success.html">
+            <input type="hidden" name="subject" value="iPad Repair Request">
             <input type="text" name="name" class="text-box" placeholder="Name*" required>
-            <input type="number" name="phone" class="text-box" placeholder="Phone no*" required>
-            <select id="Mobile" name="Mobile">
+            <input type="number" name="phone" class="text-box" placeholder="Phone no*" required pattern="[0-9]{10}" maxlength="10">
+            <select id="Mobile" name="iPad">
               <option value="iPad Models*">iPad Models*</option>
               <option value="Apple iPad Pro 11 (M5)">Apple iPad Pro 11 (M5)</option>
               <option value="Apple iPad Pro 13 (M5)">Apple iPad Pro 13 (M5)</option>

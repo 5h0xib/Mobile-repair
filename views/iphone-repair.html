@@ -15,7 +15,7 @@
         </div>
         <!-- ***** Header Text End ***** -->
     </div>
-    <!-- ***** Welcome Area End ***** -->
+    <!-- ***** Welcome Area End ***** --> 
 
     <section class="iphone-repair-form">
         <div class="repair-container">
@@ -33,7 +33,6 @@
             <input type="hidden" name="access_key" value="{{web3formsAccessKey}}">
             <input type="hidden" name="redirect" value="https://iphonicservices.com/success.html">
             <input type="hidden" name="subject" value="iPhone Repair Request">
-            <input type="hidden" name="repair-option" ng-value="selectedRepairOption">
             
             <div class="repair-form-container">
                 <div class="grid-section">
@@ -183,7 +182,7 @@
                                 <input name="Name" type="text" ng-model="formData.Name" required placeholder="Enter Your Name">
                             </p>
                             <p>
-                                <input name="Number" type="tel" ng-model="formData.Number" required placeholder="Phone number">
+                                <input name="Phone" type="tel" ng-model="formData.Number" pattern="[0-9]{10}" maxlength="10" required placeholder="Phone number">
                             </p>
                             <p>
                                 <select id="Model" name="Model" ng-model="formData.Model" required>
