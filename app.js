@@ -133,7 +133,7 @@ app.config(function($routeProvider) {
 app.controller('ServicesCtrl', function($scope) {
 
   // Web3Forms access key
-  $scope.web3formsAccessKey = '66b058d6-2a27-41db-bd33-c2e12aee64dc';
+  $scope.web3formsAccessKey = '0894fb58-c24e-47bc-ab53-a66e1a30887e';
   
   // Initialize the selected repair option
   $scope.selectedRepairOption = 'Screen / Display Replacement';
@@ -334,3 +334,4 @@ function initMenu() {
 
   })(window.jQuery);
 }
+
