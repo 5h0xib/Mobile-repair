@@ -1,0 +1,418 @@
+<style>
+        :root {
+            --primary-color: #b40000;
+            --secondary-color: #333;
+            --light-bg: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .training-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .training-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .training-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+        
+        .training-process {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+        
+        .training-item {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 20px;
+            text-align: center;
+            height: 100%;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .training-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .training-item .icon {
+            font-size: 2.5rem;
+            color: #b40000;
+            margin-bottom: 20px;
+        }
+        
+        .training-item h4 {
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .training-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .course-details {
+            padding: 80px 0;
+        }
+
+        .course-details h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .course-details h5 {
+            color: #b40000;
+            margin-bottom: 15px;
+        }
+
+        .course-details p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .course-details ul {
+            padding-left: 20px;
+        }
+
+        .course-details li {
+            color: #555;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        
+        .course-highlights {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 8px;
+            height: 100%;
+        }
+        
+        .course-highlights h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .course-highlights ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .course-highlights li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .course-highlights li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+        
+        .enrollment-form {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+        
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-control {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(180, 0, 0, 0.25);
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background: #8a0000;
+            transform: translateY(-2px);
+        }
+        
+        .training-benefits {
+            padding: 80px 0;
+        }
+        
+        .benefit-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .benefit-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .benefit-item h4 {
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .faq-section {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(180, 0, 0, 0.1);
+            color: var(--primary-color);
+        }
+        
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.2rem rgba(180, 0, 0, 0.25);
+        }
+        
+        @media (max-width: 768px) {
+            .training-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .training-hero {
+                padding: 70px 0;
+            }
+            
+            .form-container {
+                padding: 25px;
+            }
+        }
+
+        
+    </style>
+    <!-- Hero Section -->
+    <section class="training-hero" >
+        <div class="container" style="padding-top: 60px;">
+            <h1>Professional Device Repair Training</h1>
+            <p>Master the skills to repair smartphones, tablets, and laptops. Start your own repair business or advance your career with our comprehensive training program.</p>
+            <a href="#enrollment" class="main-button-slider btn">Enroll Now</a>
+        </div>
+    </section>
+
+    <section class="our-training-process" id="training-process">
+    <div class="mini-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 center-heading">
+                    <h2 class="section-title">Repair Training Program</h2>
+                    <p class="section-subtitle">Learn professional device repair skills from industry experts</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="training-item border-design-class">
+                        <div class="icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                        <h4>1. Foundation & Theory</h4>
+                        <p>Master device architecture, component identification, and diagnostic methodologies for Apple and Android devices.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="training-item border-design-class">
+                        <div class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <h4>2. Hands-On Practice</h4>
+                        <p>Work with professional tools on real devices - screens, batteries, logic boards, and microsoldering techniques.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="training-item border-design-class">
+                        <div class="icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <h4>3. Business Setup</h4>
+                        <p>Learn inventory management, customer service, pricing strategies, and marketing to launch your repair business.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Course Details Section -->
+    <section class="course-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>What You'll Learn</h3>
+                    <p>Our comprehensive training program covers all aspects of modern device repair, from basic screen replacements to advanced board-level repairs.</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h5>Core Skills</h5>
+                            <ul>
+                                <li>Screen replacement techniques</li>
+                                <li>Battery replacement procedures</li>
+                                <li>Charging port repairs</li>
+                                <li>Camera and sensor replacements</li>
+                                <li>Water damage restoration</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Advanced Skills</h5>
+                            <ul>
+                                <li>Logic board diagnostics</li>
+                                <li>Microsoldering techniques</li>
+                                <li>Data recovery methods</li>
+                                <li>Component-level troubleshooting</li>
+                                <li>Software and hardware integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="course-highlights">
+                        <h3>Course Highlights</h3>
+                        <ul>
+                            <li>Hands-on training with real devices</li>
+                            <li>Small class sizes (max 8 students)</li>
+                            <li>Professional tool kit included</li>
+                            <li>Certification upon completion</li>
+                            <li>Lifetime access to training materials</li>
+                            <li>Business startup guidance</li>
+                            <li>Job placement assistance</li>
+                            <li>Ongoing technical support</li>
+                        </ul>
+                        
+                        <div class="mt-4">
+                            <a href="#enrollment" class="btn main-button-slider">Reserve Your Spot</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enrollment Form -->
+    <section class="enrollment-form" id="enrollment">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Enroll in Our Training Program</h2>
+                    <p class="mb-5">Fill out the form below and we'll contact you with course details and availability.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="form-container">
+                        <form id="trainingForm" action="https://api.web3forms.com/submit" method="post">
+                            <input type="hidden" name="access_key" value="{{web3formsAccessKey}}">
+                            <input type="hidden" name="redirect" value="https://iphonicservices.com/success.html">
+                            <input type="hidden" name="subject" value="Repair Training Application">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="firstName" class="form-label">First Name *</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="lastName" class="form-label">Last Name *</label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Phone Number *</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-">
+                                <label for="experience" class="form-label">Previous Repair Experience</label>
+                                <select class="form-control" id="experience" style="padding: 0px;">
+                                    <option value="">Select your experience level</option>
+                                    <option value="none">No experience</option>
+                                    <option value="basic">Basic (hobbyist)</option>
+                                    <option value="intermediate">Intermediate (some professional experience)</option>
+                                    <option value="advanced">Advanced (experienced technician)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Additional Questions or Comments</label>
+                                <textarea class="form-control" id="message" rows="4"></textarea>
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="submit" class="btn main-button-slider">Submit Application</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -45,6 +45,9 @@ app.config(function($routeProvider) {
       templateUrl: "views/airpods-repair.html",
       controller: "ServicesCtrl"
     })
+    .when("/repair-traning", {
+      templateUrl: "views/repair-traning.html"
+    })
 
 
     .otherwise({
@@ -54,10 +57,23 @@ app.config(function($routeProvider) {
 
 // --- Controllers ---
 // Home Controller
-        app.controller("HomeCtrl", function($scope) {
-            // You can add any controller logic here if needed
-            $scope.pageTitle = "Our Success Metrics";
-        });
+app.controller('HomeCtrl', function($scope, $window) {
+    // You can add any controller logic here if needed
+    $scope.pageTitle = "Our Success Metrics";
+
+    // Auto-scroll function for home page
+    var initScroll = function() {
+      setTimeout(function() {
+        $window.scrollTo(0, 1);
+        setTimeout(function() {
+          $window.scrollTo(0, 0);
+        }, 10);
+      }, 100);
+    };
+    
+    // Call it when controller loads
+    initScroll();
+});
         
         // Custom directive for animated counter
         app.directive('acCounter', ['$window', function($window) {

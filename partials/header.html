@@ -6,10 +6,13 @@
         <nav class="main-nav ">
           <!-- ***** Logo Start ***** -->
           <a href="#" class="logo">
-            <img src="../assets/images/xicon.png" alt="iphonic services"/>
+            <img src="./assets/images/xicon.png" alt="iphonic services"/>
           </a>
           <!-- ***** Logo End ***** -->
-        
+          <!-- <div class="loc-call-icons">
+              <a class="location-icon" href="https://maps.app.goo.gl/QrajEBKRQsXBxZkh9"><i class="fa-solid fa-location-dot"></i><p>JM Road (Pune)</p></a>
+              <a class="nav-call-icon" href="tel:+91 95455 41541"><i class="fa-solid fa-phone"></i><p>+91 95455 41541</p></a>
+          </div> -->
           <!-- ***** Menu Start ***** -->
           <ul class="nav">
             <li><a href="#/" ng-click="closeAll()">Home</a></li>
@@ -19,7 +22,7 @@
             <li class="dropdown" ng-class="{ 'open': isDropdownOpen }">
               <a href="" ng-click="toggleDropdown()">
                 Services <i class="fa-solid fa-chevron-down"></i>
-              </a>
+              </a> 
               <ul class="dropdown-menu">
                 <li><a href="#!/iphone-repair" ng-click="closeAll()">iPhone</a></li>
                 <li><a href="#!/ipad-repair" ng-click="closeAll()">iPad</a></li>
@@ -31,6 +34,7 @@
             </li>
             <!-- Dropdown Menu End -->
             <li><a href="#contact" ng-click="closeAll()">Contact</a></li>
+            <li><a href="#!/repair-traning" ng-click="closeAll()">Traning</a></li>
           </ul>
         
           <a class='menu-trigger' ng-click="toggleMobileMenu()">
