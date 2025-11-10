@@ -4,6 +4,7 @@ app.run(function($rootScope) {
   $rootScope.$on('$viewContentLoaded', function() {
     AOS.refresh(); // simple refresh after each view load
   });
+  $rootScope.web3formsAccessKey = '0894fb58-c24e-47bc-ab53-a66e1a30887e';
 });
 
 
@@ -147,9 +148,6 @@ app.controller('HomeCtrl', function($scope, $window) {
         }]);
 
 app.controller('ServicesCtrl', function($scope) {
-
-  // Web3Forms access key
-  $scope.web3formsAccessKey = '0894fb58-c24e-47bc-ab53-a66e1a30887e';
   
   // Initialize the selected repair option
   $scope.selectedRepairOption = 'Screen / Display Replacement';
