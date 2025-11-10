@@ -46,7 +46,7 @@ app.config(function($routeProvider) {
       templateUrl: "views/airpods-repair.html",
       controller: "ServicesCtrl"
     })
-    .when("/repair-traning", {
+    .when("/repair-training", {
       templateUrl: "views/repair-traning.html"
     })
 

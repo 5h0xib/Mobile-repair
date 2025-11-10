@@ -1777,25 +1777,58 @@ preloader
 }
 
 .title-text{
-  margin-bottom: 66px;
+  margin-bottom: 69px;
   letter-spacing: -0.6px;
 }
 
 .branches-main .subtitle {
-  font-size: 42px;
+  font-size: 48px;
   font-weight: 900;
   color: #000000;
   display: block;
   font-weight: 900 !important;
 }
-
+/*  */
 .branches-main .title {
-  font-size: 54px;
+  font-size: 59px;
   font-weight: 900;
   margin-top: -6px;
   color: #000;
   display: block;
   font-weight: 900 !important;
+  position: relative;
+  display: inline-block;
+}
+
+.branches-main .title::after {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, #b40000, #ff4444);
+  border-radius: 5px;
+  animation: organicFlow 5s ease-in-out infinite;
+}
+
+@keyframes organicFlow {
+  0%, 100% {
+    clip-path: polygon(
+      0% 30%, 8% 10%, 16% 40%, 24% 5%, 32% 35%, 
+      40% 8%, 48% 45%, 56% 12%, 64% 30%, 72% 15%, 
+      80% 50%, 88% 20%, 96% 40%, 100% 25%, 
+      100% 100%, 0% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 15%, 8% 35%, 16% 10%, 24% 40%, 32% 8%, 
+      40% 35%, 48% 12%, 56% 45%, 64% 15%, 72% 30%, 
+      80% 20%, 88% 50%, 96% 25%, 100% 40%, 
+      100% 100%, 0% 100%
+    );
+  }
 }
 
 @media (max-width: 900px) {
