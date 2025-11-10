@@ -950,7 +950,7 @@ features
 
 @media (max-width: 991px) {
   .features-small-items-3{
-    margin-top: -200px;
+    margin-top: -130px;
   }
 
   .home-feature {
@@ -1194,28 +1194,36 @@ parallax & home seperator
     }
 }
 
-.product {
-  overflow: hidden;
-  display: inline-block;
-  width: 100%;
-  background: rgb(255, 255, 255);
-  border-radius: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  vertical-align: top;
-}
+
 
 .product .image-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 180px;
   padding: 0;
-  margin: 10px;
+  max-height: 180px;
+  width: 100%;
+  overflow: hidden; /* prevents image overflow */
 }
 
 .product .image-box img {
-  height: 100%;
-  object-fit: cover;
+  max-height: 180px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain; /* keeps image fully visible */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .product .image-box {
+    max-height: 120px; /* reduce height on small screens */
+    margin: 5px;
+  }
+
+  .product .image-box img {
+    max-height: 120px;
+  }
 }
 
 
@@ -1877,11 +1885,24 @@ preloader
 }
 
 .branch-card a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   background-color: #000;
   font-weight: 700;
   font-size: 11px;
-  width: 147px;
 }
+
+.branch-card a .Call-now{
+  display: none;
+}
+
+.branch-card a .ph-num{
+  display: block;
+  margin-left: 6px;
+}
+
 
 /* Branch Info (Title + Name) */
 .branch-info strong {
@@ -1898,11 +1919,26 @@ preloader
   color: #6b0000;
 }
 
+
 /* Responsive: 2 per row on mobile */
 @media (max-width: 600px) {
+  .branch-card a .Call-now{
+    display: block;
+    margin-left: 6px;
+  }
+  .branch-card a .ph-num{
+    display: none;
+  }
   .branch-card {
     width: 45%; /* two per row */
     height: 150px;
+  }
+  .branch-info strong {
+    font-size: 15px;
+  }
+
+  .branch-info p {
+    font-size: 12px;
   }
 }
 
