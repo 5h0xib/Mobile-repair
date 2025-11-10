@@ -1218,7 +1218,6 @@ parallax & home seperator
 @media (max-width: 600px) {
   .product .image-box {
     max-height: 120px; /* reduce height on small screens */
-    margin: 5px;
   }
 
   .product .image-box img {
