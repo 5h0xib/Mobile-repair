@@ -1833,19 +1833,20 @@ preloader
 
 @media (max-width: 900px) {
   .title-text{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     letter-spacing: 1px;
+    margin-top: 40px;
   }
   .branches-main {
     margin-top: 20px;
   }
 
   .branches-main .subtitle {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   .branches-main .title {
-    font-size: 30px;
+    font-size: 26px;
   }
 }
 
