@@ -703,7 +703,7 @@ welcome
   height: 100vh;
   /* overlay color on top of image */
   background: 
-              url('../images/background\ image\ 3.jpg') center/cover no-repeat;
+              url('../images/background\ image\ 42.jpg') center/cover no-repeat;
   position: relative;
 }
 
@@ -1783,31 +1783,94 @@ preloader
   text-align: center;
 }
 
-.title-text{
+/* ________try animaion__________ */
+
+
+.title-text {
   margin-bottom: 69px;
   letter-spacing: -0.6px;
 }
 
-.branches-main .subtitle {
-  font-size: 48px;
+.title-text .subtitle {
+  font-size: 58px;
   font-weight: 900;
-  color: #000000;
+  color: #ffffff;
   display: block;
   font-weight: 900 !important;
 }
-/*  */
-.branches-main .title {
-  font-size: 59px;
+
+.title-text .title {
+  font-size: 79px;
   font-weight: 900;
   margin-top: -6px;
-  color: #000;
+  color: #ffffff;
   display: block;
   font-weight: 900 !important;
   position: relative;
   display: inline-block;
 }
 
-.branches-main .title::after {
+/* Split the text into individual letters */
+.title-text .subtitle,
+.title-text .title {
+  display: inline-block;
+}
+
+.title-text .subtitle span,
+.title-text .title span {
+  display: inline-block;
+  animation: letterFlicker 1.5s ease-in-out infinite;
+}
+
+/* Random delays for each letter to create natural flickering */
+.title-text .subtitle span:nth-child(1) { animation-delay: 0.1s; }
+.title-text .subtitle span:nth-child(2) { animation-delay: 0.3s; }
+.title-text .subtitle span:nth-child(3) { animation-delay: 0.7s; }
+.title-text .subtitle span:nth-child(4) { animation-delay: 0.2s; }
+.title-text .subtitle span:nth-child(5) { animation-delay: 0.5s; }
+.title-text .subtitle span:nth-child(6) { animation-delay: 0.8s; }
+.title-text .subtitle span:nth-child(7) { animation-delay: 0.4s; }
+.title-text .subtitle span:nth-child(8) { animation-delay: 0.6s; }
+.title-text .subtitle span:nth-child(9) { animation-delay: 0.9s; }
+
+.title-text .title span:nth-child(1) { animation-delay: 0.1s; }
+.title-text .title span:nth-child(2) { animation-delay: 0.3s; }
+.title-text .title span:nth-child(3) { animation-delay: 0.7s; }
+.title-text .title span:nth-child(4) { animation-delay: 0.2s; }
+.title-text .title span:nth-child(5) { animation-delay: 0.5s; }
+.title-text .title span:nth-child(6) { animation-delay: 0.8s; }
+.title-text .title span:nth-child(7) { animation-delay: 0.4s; }
+.title-text .title span:nth-child(8) { animation-delay: 0.6s; }
+.title-text .title span:nth-child(9) { animation-delay: 0.9s; }
+.title-text .title span:nth-child(10) { animation-delay: 0.1s; }
+.title-text .title span:nth-child(11) { animation-delay: 0.3s; }
+.title-text .title span:nth-child(12) { animation-delay: 0.7s; }
+.title-text .title span:nth-child(13) { animation-delay: 0.2s; }
+.title-text .title span:nth-child(14) { animation-delay: 0.5s; }
+.title-text .title span:nth-child(15) { animation-delay: 0.8s; }
+
+/* Add more nth-child rules as needed for longer text */
+
+@keyframes letterFlicker {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  75% {
+    opacity: 0.9;
+    transform: scale(0.99);
+  }
+}
+
+/* .title-text .title::after {
   content: '';
   position: absolute;
   bottom: -14px;
@@ -1836,7 +1899,7 @@ preloader
       100% 100%, 0% 100%
     );
   }
-}
+} */
 
 @media (max-width: 900px) {
   .title-text{
@@ -1848,12 +1911,21 @@ preloader
     margin-top: 20px;
   }
 
-  .branches-main .subtitle {
-    font-size: 20px;
+  .title-text .subtitle {
+    font-size: 30px;
   }
 
-  .branches-main .title {
-    font-size: 26px;
+  .title-text .title {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 400px) {
+  .welcome-area{
+    height: 120vh;
+  }
+  .branches-main {
+    margin-top: 50px;
   }
 }
 
