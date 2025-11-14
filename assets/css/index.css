@@ -1792,7 +1792,7 @@ preloader
 }
 
 .title-text .subtitle {
-  font-size: 58px;
+  font-size: 48px;
   font-weight: 900;
   color: #ffffff;
   display: block;
@@ -1800,7 +1800,7 @@ preloader
 }
 
 .title-text .title {
-  font-size: 79px;
+  font-size: 59px;
   font-weight: 900;
   margin-top: -6px;
   color: #ffffff;
